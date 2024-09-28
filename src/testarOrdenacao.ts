@@ -19,6 +19,9 @@ function testarOrdenacaoPedidos(qtdPedidos: number): void {
     console.log(`\nTempo de ordenação: ${(fim - inicio)} ms\n`);
 }
 
-testarOrdenacaoPedidos(100);  
-//testarOrdenacaoPedidos(1000); 
-//testarOrdenacaoPedidos(100000); 
+//testarOrdenacaoPedidos(100);
+testarOrdenacaoPedidos(1000);
+//testarOrdenacaoPedidos(100000);
+
+//compilar: tsc -p ./tsconfig.json
+//executar: node dist/testarOrdenacao.js

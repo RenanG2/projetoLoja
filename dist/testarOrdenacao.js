@@ -1,21 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const gerarPedidos_1 = require("./gerarPedidos");
-const pedido_1 = require("./pedido");
-// Função para testar o Merge Sort com diferentes cenários
+var gerarPedidos_1 = require("./gerarPedidos");
+var pedido_1 = require("./pedido");
 function testarOrdenacaoPedidos(qtdPedidos) {
-    console.log(`\nTestando com ${qtdPedidos} pedidos:`);
-    const pedidos = (0, gerarPedidos_1.gerarPedidos)(qtdPedidos);
+    console.log("\nTestando com ".concat(qtdPedidos, " pedidos:"));
+    var pedidos = (0, gerarPedidos_1.gerarPedidos)(qtdPedidos);
     console.log("\nPedidos antes da ordenação:");
     (0, gerarPedidos_1.exibirPedidos)(pedidos);
-    const inicio = Date.now();
-    const pedidosOrdenados = (0, pedido_1.mergeSort)(pedidos);
-    const fim = Date.now();
+    var inicio = Date.now();
+    var pedidosOrdenados = (0, pedido_1.mergeSort)(pedidos);
+    var fim = Date.now();
     console.log("\nPedidos depois da ordenação:");
     (0, gerarPedidos_1.exibirPedidos)(pedidosOrdenados);
-    console.log(`\nTempo de ordenação: ${(fim - inicio)} ms\n`);
+    console.log("\nTempo de ordena\u00E7\u00E3o: ".concat((fim - inicio), " ms\n"));
 }
-// Simulando cenários
-testarOrdenacaoPedidos(100); // Cenário de vendas moderadas (~100 pedidos)
-testarOrdenacaoPedidos(1000); // Cenário de alta demanda (~1000 pedidos)
-testarOrdenacaoPedidos(100000); // Cenário com alta precisão (~100.000 pedidos)
+//testarOrdenacaoPedidos(100);
+testarOrdenacaoPedidos(1000);
+//testarOrdenacaoPedidos(100000);
+//compilar: tsc -p ./tsconfig.json
+//executar: node dist/testarOrdenacao.js
